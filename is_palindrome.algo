@@ -1,0 +1,16 @@
+FUNCTION isPalindrome(word)
+VAR
+    //  initializing two pointers, start and end,  which represent the start and end indices of the word, respectively. 
+    start := 0;
+    end := word.length - 1;
+BEGIN
+// comparing the characters at the start and end indices.
+    WHILE (start < end) DO
+        IF (word[start] !== word[end]) THEN
+            RETURN false;
+        END_IF
+        start++;
+        end--;
+    END_WHILE
+    RETURN true ;
+END
